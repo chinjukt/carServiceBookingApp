@@ -1,0 +1,15 @@
+.img-overlayy {
+    position: absolute;
+    top: 0;
+    bottom: 100px;
+    left: 120px;
+    right: 0;
+    text-align: left;
+  }
+  
+  .img-overlayy:before {
+    content: ' ';
+    display: block;
+    
+    height: 50%;
+  }
