@@ -44,7 +44,7 @@ function Carservices() {
             allservices?.map((item)=>(
               <Col sm={12} md={6} lg={4} xl={3} className='mb-4'>
                 <ServiceCard services={item}/>
-              </Col>)):<p className='text-danger fs-3'><b>No project uploaded yet !!</b></p>}
+              </Col>)):<p className='text-danger fs-3'><b>No service uploaded yet !!</b></p>}
               
             </Row> 
           </div>
