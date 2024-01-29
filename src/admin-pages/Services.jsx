@@ -145,7 +145,7 @@ function Services() {
   return (
     <>
     <div className='d-flex justify-content-evently w-100'>
-      <div style={{height:'auto'}}><Sidebar/></div>
+    <div className='bg-primary' style={{height:'auto'}}><Sidebar/></div>
       
       <div className='m-5 w-100'>
         <div className='d-flex justify-content-around'>
@@ -154,15 +154,15 @@ function Services() {
         </div>
         
         <div className='ms-5 mt-5'>
-          <Row >
+          <Row>
 
             { allservices?.length>0?
             allservices?.map((item)=>(<Col sm={12} md={12} lg={6} xl={4} className='m-2'>
 
-              <Card style={{ width: '20rem',height:'500px'}} className='shadow' >
-                <Card.Img variant="top" src={`${BASE_URL}/uploads/${item.image}`} />
+              <Card style={{ width: '25rem'}} className='shadow' >
+                <Card.Img variant="top" width={'300px'} height={'300px'} src={`${BASE_URL}/uploads/${item.image}`} />
                 <Card.Body>
-                  <Card.Title>{item.servicename}</Card.Title>
+                  <Card.Title style={{fontWeight:'bolder',fontSize:'22px'}}>{item.servicename}</Card.Title>
                   <Card.Text>
                     {item.description}
                   </Card.Text>

@@ -30,7 +30,7 @@ const Sidebar = () => {
   },[isadminAuthToken])
   return (
     <div
-      style={{ display: 'flex', height: '100%', overflow: 'scroll initial' }}
+      style={{ display: 'flex', height: 'auto', overflow: 'scroll initial' }}
     >
       <CDBSidebar className='bg-primary' textColor="#fff">
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
@@ -71,13 +71,13 @@ const Sidebar = () => {
         </CDBSidebarContent>
 
         <CDBSidebarFooter style={{ textAlign: 'center' }}>
-          <div
+          {/* <div
             style={{
               padding: '20px 5px',
             }}
           >
             Sidebar Footer
-          </div>
+          </div> */}
         </CDBSidebarFooter>
       </CDBSidebar>
     </div>

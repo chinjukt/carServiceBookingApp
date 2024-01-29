@@ -8,6 +8,7 @@ import Vehicle from './admin-pages/Vehicle'
 import Bookings from './admin-pages/Bookings'
 
 
+
 import Carservices from './user-pages/Carservices'
 import Mybookings from './user-pages/Mybookings'
 import Register from './user-pages/Register'
@@ -17,7 +18,7 @@ import Header from './components/Header';
 import Booknow from './user-pages/Booknow';
 import { isAuthTokenContext } from './contextapi/ShareContext';
 import { useContext } from 'react';
-import Allbookings from './admin-pages/Allbooking';
+import Allbooking from './admin-pages/Allbooking';
 
 
 function App() {
@@ -34,8 +35,8 @@ function App() {
         <Route path='/dashboard' element={<Dashboard/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/vehicles' element={<Vehicle/>}/>
-        <Route path='/allbookings' element={<Bookings/>}/>
-        <Route path='/all' element={<Allbookings/>}/>
+        {/* <Route path='/all' element={<Bookings/>}/> */}
+        <Route path='/allbookings' element={<Allbooking/>}/>
         
         <Route path='/carservices' element={<Carservices/>}/>
         <Route path='/mybookings' element={<Mybookings/>}/>

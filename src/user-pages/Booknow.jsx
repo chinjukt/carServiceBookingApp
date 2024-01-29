@@ -10,6 +10,7 @@ function Booknow() {
 
     const [selectedservices,setselectedservices] = useState([])
 
+
     const { id } = useParams();
 
     const showselectedservices = async()=>{
@@ -45,6 +46,7 @@ function Booknow() {
             <div className='d-flex justify-content-between align-items-center'>
                 <div>
                     <h2>Price : ₹ {' '}{item.price}</h2> 
+                        
                     <h4>Services Available : {item.subservice}</h4>
                     
                 </div>

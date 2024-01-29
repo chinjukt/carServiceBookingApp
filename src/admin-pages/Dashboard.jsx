@@ -65,7 +65,7 @@ function Dashboard() {
   return (
     <>
     <div className='d-flex justify-content-evently'>
-      <div style={{height:'100vh'}}><Sidebar/></div>
+    <div className='bg-primary' style={{height:'100vh'}}><Sidebar/></div>
        
       <div className='m-5 w-100'>
         <div className='d-flex justify-centent-center align-items-center w-100 flex-column'>
