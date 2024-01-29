@@ -26,9 +26,9 @@ function Carservices() {
   },[])
 
   useEffect(()=>{
-    isAuthToken &&
-      navigate('/carservices')
-  },[])
+    !isAuthToken &&
+      navigate('/login')
+  },[isAuthToken])
 
   return (
     <>
