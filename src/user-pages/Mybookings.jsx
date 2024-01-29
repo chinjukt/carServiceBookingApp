@@ -1,12 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { userbookingAPI } from '../services/allAPI'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Cancelbooking from './Cancelbooking';
+ import { isAuthTokenContext } from '../contextapi/ShareContext';
+import { useNavigate } from 'react-router-dom';
 
-function Mybookings() {
+function Mybookings() { 
+
+  const navigate = useNavigate()
+
+  const {isAuthToken,setisAuthtoken} = useContext(isAuthTokenContext)
 
   const [userbooking,setuserbooking] = useState([])
 
@@ -27,9 +33,11 @@ function Mybookings() {
   }
 
   useEffect(()=>{
+    !isAuthToken &&
+      navigate('/login')
     getuserbooking()
     setbookstatusresponse(false)
-  },[bookstatusresponse])
+  },[bookstatusresponse,isAuthToken])
 
   return (
     <>
