@@ -10,7 +10,7 @@ function ServiceCard({services}) {
     <div>
 
         <Card style={{ width: '18rem',height:'430px'}} >
-            <Card.Img variant="top" width={'250px'} height={'250px'} src={`${BASE_URL}/uploads/${services.image}`} />
+            <Card.Img variant="top" width={'250px'} height={'230px'} src={`${BASE_URL}/uploads/${services.image}`} />
             <Card.Body>
                 <Card.Title style={{fontWeight:'bold',fontSize:'22px'}}>{services.servicename}</Card.Title>
                 <Card.Text>
