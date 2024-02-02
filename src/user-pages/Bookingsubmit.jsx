@@ -130,7 +130,7 @@ function Bookingsubmit({selectedservices}) {
             <div className="row">
                 <div className='col-lg-12'>
                     <div className="mb-3 mt-4 w-100">
-                        <input type="text" className='form-control' placeholder='Service Name' value="" disabled/>
+                        <input type="text" className='form-control' placeholder='Service Name' value={selectedservices.servicename} disabled/>
                     </div>
                 </div>
 
