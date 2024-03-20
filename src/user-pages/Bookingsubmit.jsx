@@ -12,6 +12,9 @@ function Bookingsubmit({selectedservices}) {
 
     const [date, setDate] = useState(new Date());
 
+    const weekend = (date) => new Date() < date;
+
+
     const [show, setShow] = useState(false);
 
     const [allcars,setallcars] = useState([])
@@ -154,8 +157,13 @@ function Bookingsubmit({selectedservices}) {
                 
                 <div className="col-lg-6">
                     <div className="mb-3 mt-4 w-100">
-                    <DatePicker className='form-control' dateFormat="MM/dd/yyyy" selected={date} onChange={date => setDate(date)} />
-                    {/* <DatePicker className='form-control' dateFormat="MM/dd/yyyy" selected={date} onChange={getbookingdate} /> */}
+                        <DatePicker
+                        filterDate={weekend}
+                        selected={date}
+                        onChange={(date) => setDate(date)}
+                    />
+{/*                     <DatePicker className='form-control' dateFormat="MM/dd/yyyy" selected={date} onChange={date => setDate(date)} /> */}
+                   
                     </div>
                 </div>
                 <div className='col-lg-6'>    
